@@ -8,7 +8,6 @@ Welcome! This repository documents my journey of solving over **250 LeetCode pro
 
 - 🔢 **250+ Problems Solved**
 - 🧑‍💻 **Languages Used:** Java (Algorithms) • MySQL (Databases)
-- 🗂️ Organized by topic and difficulty
 - 📈 Includes time and space complexity for most problems
 - 🗒️ Neat, readable code with comments and edge case handling
 
