@@ -19,14 +19,6 @@ class Solution {
             TreeNode newNode=new TreeNode(val);
             return newNode;
         }
-        /*if(root.left==null && root.val>val){
-            TreeNode newNode=new TreeNode(val);
-            root.left=newNode;
-        }
-        if(root.right==null && root.val<val){
-            TreeNode newNode=new TreeNode(val);
-            root.right=newNode;
-        }*/
         if(val>root.val){
             root.right=insertIntoBST(root.right,val);
         }
