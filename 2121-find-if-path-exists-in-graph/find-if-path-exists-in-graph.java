@@ -15,11 +15,11 @@ class Solution {
         return dfs(graph,source,destination,visited); 
     }
     boolean dfs(List<List<Integer>> graph,int source,int destination,boolean[] visited){
+        if(source==destination){
+            return true;
+        }
         visited[source]=true;
         for(int neighbour:graph.get(source)){
-            if(neighbour==destination){
-                return true;
-            }
             if(!visited[neighbour]){
                 if(dfs(graph,neighbour,destination,visited)){
                     return true;
