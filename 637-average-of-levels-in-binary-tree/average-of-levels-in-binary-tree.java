@@ -24,9 +24,11 @@ class Pair{
 class Solution {
     public List<Double> averageOfLevels(TreeNode root) {
         Queue<Pair> queue=new LinkedList<>();
-        Map<Integer,List<Integer>> map=new HashMap<>();
+        //Map<Integer,List<Integer>> map=new HashMap<>();
         queue.offer(new Pair(0,root));
-        while(!queue.isEmpty()){
+        Map<Integer,Double> sumMap=new HashMap<>();
+        Map<Integer,Integer> countMap=new HashMap<>();
+        /*while(!queue.isEmpty()){
             Pair cur=queue.poll();
             if(map.containsKey(cur.vd)){
                 map.get(cur.vd).add(cur.node.val);
@@ -52,6 +54,22 @@ class Solution {
             double avg=sum/list.size();
             avgList.add(avg);
         }
-        return avgList;
+        return avgList;*/
+        while(!queue.isEmpty()){
+            Pair cur=queue.poll();
+            sumMap.put(cur.vd,sumMap.getOrDefault(cur.vd,(double)0)+cur.node.val);
+            countMap.put(cur.vd,countMap.getOrDefault(cur.vd,0)+1);
+            if(cur.node.left!=null){
+                queue.offer(new Pair(cur.vd+1,cur.node.left));
+            }
+            if(cur.node.right!=null){
+                queue.offer(new Pair(cur.vd+1,cur.node.right));
+            }
+        }
+        List<Double> avg=new ArrayList<>();
+        for(Integer key:sumMap.keySet()){
+            avg.add(sumMap.get(key)/countMap.get(key));
+        }
+        return avg;
     }
 }
