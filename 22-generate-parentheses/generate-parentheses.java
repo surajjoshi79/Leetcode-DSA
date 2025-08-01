@@ -5,7 +5,7 @@ class Solution {
         return list;
     }
     void helper(int n,int open,int closed,List<String> list,String str){
-        if(open==closed && closed==n){
+        if(open==n && closed==n){
             list.add(new String(str));
             return ;
         }
