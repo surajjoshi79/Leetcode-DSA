@@ -1,5 +1,6 @@
 class Solution {
     public int maxProduct(String[] words) {
+        //bit masking
         int[] values=new int[words.length];
         int index=0;
         for(String word:words){
@@ -8,6 +9,7 @@ class Solution {
             }
             index++;
         }
+        //for finding max product
         int max=0;
         for(int i=0;i<words.length;i++){
             for(int j=i+1;j<words.length;j++){
@@ -17,16 +19,5 @@ class Solution {
             }
         }
         return max;
-    }
-    boolean commonLetter(String str1,String str2){
-        if(str1.equals(str2)){
-            return true;
-        }
-        for(char c:str2.toCharArray()){
-            if(str1.contains(Character.toString(c))){
-                return true;
-            }
-        }
-        return false;
     }
 }
