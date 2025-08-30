@@ -6,7 +6,7 @@ Welcome! This repository documents my journey of solving over **250 LeetCode pro
 
 ## 📌 Highlights
 
-- 🔢 **250+ Problems Solved**
+- 🔢 **350+ Problems Solved**
 - 🧑‍💻 **Languages Used:** Java (Algorithms) • MySQL (Databases)
 - 📈 Includes time and space complexity for most problems
 - 🗒️ Neat, readable code with comments and edge case handling
