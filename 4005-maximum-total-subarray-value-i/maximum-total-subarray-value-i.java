@@ -9,7 +9,6 @@ class Solution {
                 min=num;
             }
         }
-        long diff=(long)max-(long)min;
-        return diff*k;
+        return (long)(max-min)*k;
     }
 }
