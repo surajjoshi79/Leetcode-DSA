@@ -13,10 +13,10 @@ class Solution {
             }
             i++;
         }
-        List<Integer> list=new ArrayList<>(map.values());
-        Collections.sort(list);
-        if(!list.isEmpty()){
-            return list.get(0);
+        for(i=0;i<s.length();i++){
+            if(map.containsKey(s.charAt(i))){
+                return i;
+            }
         }
         return -1;
     }
